@@ -1,0 +1,90 @@
+{
+    "_from": "git+https://github.com/yaser2us/dynamo.git",
+    "_id": "dynamo@2.0.0",
+    "_inBundle": false,
+    "_integrity": "",
+    "_location": "/dynamo",
+    "_phantomChildren": {},
+    "_requested": {
+        "type": "git",
+        "raw": "git+https://github.com/yaser2us/dynamo.git",
+        "rawSpec": "git+https://github.com/yaser2us/dynamo.git",
+        "saveSpec": "git+https://github.com/yaser2us/dynamo.git",
+        "fetchSpec": "https://github.com/yaser2us/dynamo.git",
+        "gitCommittish": null
+    },
+    "_requiredBy": [
+        "#USER",
+        "/"
+    ],
+    "_resolved": "git+https://github.com/yaser2us/dynamo.git#80a2b0bb0a038cc27eb56d3c122224b7965d7546",
+    "_spec": "git+https://github.com/yaser2us/dynamo.git",
+    "_where": "/Users/yasser/m2uuiux-frontend",
+    "author": {
+        "name": "yaser2us"
+    },
+    "bugs": {
+        "url": "https://github.com/yaser2us/dynamo/issues"
+    },
+    "bundleDependencies": false,
+    "dependencies": {
+        "lodash": "^4.17.21",
+        "jsonata": "^2.0.2"
+    },
+    "deprecated": false,
+    "description": "the joy of development",
+    "devDependencies": {
+        "babel-eslint": "^10.0.3",
+        "cross-env": "^7.0.2",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.7.0",
+        "eslint-config-standard": "^14.1.0",
+        "eslint-config-standard-react": "^9.2.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-node": "^11.0.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-react": "^7.17.0",
+        "eslint-plugin-standard": "^4.0.1",
+        "gh-pages": "^2.2.0",
+        "microbundle-crl": "^0.13.10",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.0.4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "^3.4.1"
+    },
+    "engines": {
+        "node": ">=10"
+    },
+    "files": [
+        "dist"
+    ],
+    "homepage": "https://github.com/yaser2us/dynamo#readme",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/index.modern.js",
+    "name": "dynamo",
+    "peerDependencies": {
+        "react": "^16.8.6 || ^17.0.0 || ^17.0.1 || ^17.0.2 || ^18.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yaser2us/dynamo.git"
+    },
+    "scripts": {
+        "build": "microbundle-crl --no-compress --format modern,cjs",
+        "deploy": "gh-pages -d example/build",
+        "predeploy": "cd example && npm install && npm run build",
+        "prepare": "run-s build",
+        "start": "microbundle-crl watch --no-compress --format modern,cjs",
+        "start:example": "cd example && npm install && npm run start",
+        "test": "run-s test:unit test:lint test:build",
+        "test:build": "run-s build",
+        "test:lint": "eslint .",
+        "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+        "test:watch": "react-scripts test --env=jsdom"
+    },
+    "source": "src/index.js",
+    "version": "2.0.0"
+}
